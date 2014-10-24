@@ -14,7 +14,11 @@ gemspec
 # gem 'debugger'
 
 group :test do
+  gem 'simplecov', :require => false
   gem "rspec-rails"
   gem "factory_girl_rails"
   gem "shoulda-matchers"
+  gem 'capybara'
+  gem 'poltergeist'
+  gem 'selenium-webdriver'
 end
