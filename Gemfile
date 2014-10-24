@@ -13,5 +13,8 @@ gemspec
 # To use debugger
 # gem 'debugger'
 
-gem "rspec-rails"
-gem "factory_girl_rails"
+group :test do
+  gem "rspec-rails"
+  gem "factory_girl_rails"
+  gem "shoulda-matchers"
+end
