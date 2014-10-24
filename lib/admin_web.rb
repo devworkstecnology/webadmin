@@ -4,7 +4,7 @@ require 'devise'
 module AdminWeb
   class Engine < ::Rails::Engine
     config.to_prepare do
-      Devise::SessionsController.layout "layout_for_sessions_controller"
+      Devise::SessionsController.layout "admin_web/application"
     end
   end
 end
