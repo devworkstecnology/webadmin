@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe "Login", :type => :feature, :js => true do
+RSpec.describe "Login", :type => :feature do
   it "login" do
     user = create(:admin_web_user)
 
