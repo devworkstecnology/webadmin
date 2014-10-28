@@ -1,5 +1,23 @@
-.box-login{
+.box{
   border: 1px solid;
   text-align: left;
+}
+.box-login{
   margin-top: 30px;
+}
+
+a.link-new{
+  float: right;
+}
+
+.error input, .error textarea {
+  border: 1px solid red;
+}
+
+input:not([type=submit]), textarea{
+  width: 100%;
+}
+
+.help-inline{
+  color: red;
 }
