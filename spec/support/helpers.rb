@@ -7,8 +7,7 @@ module Helpers
   end
 
   def sign_in(options={})
-    visit '/admin_web'
-
+    visit admin_web.root_path
     fill_in 'Email', with: current_user.email
     fill_in 'Senha', with: current_user.password
 

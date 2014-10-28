@@ -13,6 +13,11 @@ gemspec
 # To use debugger
 # gem 'debugger'
 
+gem 'jquery-rails'
+
+group :development do
+  gem 'pry'
+end
 group :test do
   gem 'simplecov', :require => false
   gem "rspec-rails"
@@ -21,4 +26,6 @@ group :test do
   gem 'capybara'
   gem 'poltergeist'
   gem 'selenium-webdriver'
+  gem 'database_cleaner'
+  gem 'capybara-screenshot'
 end
