@@ -1,0 +1,22 @@
+<div class="row">
+  <div class="col-md-8">
+    <%= simple_form_for @post, html: { class: "form-horizontal", role: "form"} do |f| %>
+
+        <%= f.input :title %>
+
+        <%= f.input :abstract %>
+
+        <%= f.input :image, class: "form-control" %>
+
+        <%= f.input :body, :as => :ckeditor, :input_html => { :ckeditor => {:toolbar => 'Full'} } %>
+
+      <hr>
+      <div class="form-actions">
+        <%= f.submit 'Salvar', class: "btn btn-success" %>
+        <%= link_to 'Apagar', @post, method: :delete, data: {confirm: 'Tem certeza que deseja remover esse registro?'}, class: 'btn btn-danger' %>
+        <%= link_to 'Cancelar', posts_path, class: 'btn btn-primary' %>
+      </div>
+    <% end %>
+  </div>
+
+</div>
