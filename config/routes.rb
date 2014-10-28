@@ -4,5 +4,5 @@ AdminWeb::Engine.routes.draw do
   root "main#index"
 
   resources :posts
-  resources :institucionals
+  resources :institutionals
 end

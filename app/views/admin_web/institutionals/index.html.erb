@@ -3,7 +3,7 @@
     <h4>Cadastro de institucionais</h4>
 
     <div class="row">
-      <div class="col-md-12"><%= link_to 'Nova', new_institucional_path, class: 'btn btn-primary link-new' %></div>
+      <div class="col-md-12"><%= link_to 'Nova', new_institutional_path, class: 'btn btn-primary link-new' %></div>
     </div>
 
     <div class="table-responsive">
@@ -16,9 +16,9 @@
         </thead>
 
         <tbody>
-          <% @institucionals.each do |institucional| %>
-            <td><%= link_to institucional.name, edit_institucional_path(institucional) %></td>
-            <td><%= I18n.l institucional.created_at, format: :only_date %></td>
+          <% @institutionals.each do |institutional| %>
+            <td><%= link_to institutional.name, edit_institutional_path(institutional) %></td>
+            <td><%= I18n.l institutional.created_at, format: :only_date %></td>
           <% end %>
         </tbody>
       </table>

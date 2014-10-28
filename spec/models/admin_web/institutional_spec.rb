@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 module AdminWeb
-  RSpec.describe Institucional, :type => :model do
+  RSpec.describe Institutional, :type => :model do
     context "Validations" do
       it { should validate_presence_of :name }
       it { should validate_presence_of :body }

@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-feature AdminWeb::Institucional do
+feature AdminWeb::Institutional do
   background do
     sign_in
   end
@@ -13,7 +13,7 @@ feature AdminWeb::Institucional do
     click_link 'Nova'
 
     fill_in 'Título', with: "Institucional 1"
-    fill_in_ckeditor 'institucional_body', with: "Corpo da primeira página institucional"
+    fill_in_ckeditor 'institutional_body', with: "Corpo da primeira página institucional"
 
     click_button 'Salvar'
 
@@ -27,7 +27,7 @@ feature AdminWeb::Institucional do
     expect(page).to have_field "Título", with: "Institucional 1"
 
     fill_in 'Título', with: "Alterando a institucional 1"
-    fill_in_ckeditor 'institucional_body', with: "Alterando o corpo da primeira página institucional"
+    fill_in_ckeditor 'institutional_body', with: "Alterando o corpo da primeira página institucional"
 
     click_button "Salvar"
 

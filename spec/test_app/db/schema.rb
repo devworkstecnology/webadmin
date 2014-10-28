@@ -16,7 +16,7 @@ ActiveRecord::Schema.define(version: 20141028020102) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "admin_web_institucionals", force: true do |t|
+  create_table "admin_web_institutionals", force: true do |t|
     t.string   "name"
     t.text     "body"
     t.datetime "created_at"

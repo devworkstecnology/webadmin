@@ -12,6 +12,6 @@ pt-BR:
         image: "Imagem"
         body: "Notícia"
 
-      admin_web/institucional:
+      admin_web/institutional:
         name: "Título"
         body: "Conteúdo"

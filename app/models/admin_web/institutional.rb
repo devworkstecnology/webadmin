@@ -1,5 +1,5 @@
 module AdminWeb
-  class Institucional < ActiveRecord::Base
+  class Institutional < ActiveRecord::Base
 
     validates :name, :body, presence: true
 
