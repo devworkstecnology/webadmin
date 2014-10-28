@@ -11,3 +11,7 @@ pt-BR:
         abstract: "Resumo"
         image: "Imagem"
         body: "Notícia"
+
+      admin_web/institucional:
+        name: "Título"
+        body: "Conteúdo"
