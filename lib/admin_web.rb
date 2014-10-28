@@ -1,4 +1,7 @@
 require 'devise'
+require 'simple_form'
+require 'ckeditor'
+require 'carrierwave'
 require "admin_web/engine"
 
 module AdminWeb
