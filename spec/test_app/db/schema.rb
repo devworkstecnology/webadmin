@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141028020102) do
+ActiveRecord::Schema.define(version: 20141028135201) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -52,6 +52,13 @@ ActiveRecord::Schema.define(version: 20141028020102) do
 
   add_index "admin_web_users", ["email"], name: "index_admin_web_users_on_email", unique: true, using: :btree
   add_index "admin_web_users", ["reset_password_token"], name: "index_admin_web_users_on_reset_password_token", unique: true, using: :btree
+
+  create_table "admin_web_videos", force: true do |t|
+    t.string   "description"
+    t.string   "link"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "ckeditor_assets", force: true do |t|
     t.string   "data_file_name",               null: false

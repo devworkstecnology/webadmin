@@ -15,3 +15,7 @@ pt-BR:
       admin_web/institutional:
         name: "Título"
         body: "Conteúdo"
+
+      admin_web/video:
+        description: "Descrição"
+        link: "Link do Youtube"

@@ -5,4 +5,5 @@ AdminWeb::Engine.routes.draw do
 
   resources :posts
   resources :institutionals
+  resources :videos
 end
