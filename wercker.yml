@@ -3,7 +3,7 @@ services:
   - wercker/postgresql
 build:
   steps:
-    - rvm-use:
+    - wercker/rvm-use:
         version: ruby-2.1.1
     - bundle-install
     - rails-database-yml:
