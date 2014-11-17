@@ -2,6 +2,7 @@ require 'devise'
 require 'simple_form'
 require 'ckeditor'
 require 'carrierwave'
+require 'i18n_alchemy'
 require "admin_web/engine"
 
 module AdminWeb

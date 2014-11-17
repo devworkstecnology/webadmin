@@ -11,10 +11,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141028135201) do
+ActiveRecord::Schema.define(version: 20141114020551) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "admin_web_albums", force: true do |t|
+    t.string   "title",      null: false
+    t.date     "date",       null: false
+    t.string   "local"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "admin_web_institutionals", force: true do |t|
     t.string   "name"

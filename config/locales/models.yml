@@ -19,3 +19,7 @@ pt-BR:
       admin_web/video:
         description: "Descrição"
         link: "Link do Youtube"
+      admin_web/album:
+        title: "Título"
+        local: "Local"
+        date: "Data"

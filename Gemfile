@@ -18,6 +18,7 @@ gem 'jquery-rails'
 group :development do
   gem 'pry'
 end
+
 group :test do
   gem 'simplecov', :require => false
   gem "rspec-rails"

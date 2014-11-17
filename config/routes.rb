@@ -5,5 +5,6 @@ AdminWeb::Engine.routes.draw do
 
   resources :posts
   resources :institutionals
+  resources :albums
   resources :videos
 end

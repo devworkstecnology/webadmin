@@ -26,6 +26,7 @@ Gem::Specification.new do |s|
   s.add_dependency "rmagick"
   s.add_dependency 'less-rails', '~> 2.6.0'
   s.add_dependency 'therubyracer'
+  s.add_dependency 'i18n_alchemy'
 
   s.add_development_dependency "pg"
 end
