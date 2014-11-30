@@ -28,6 +28,7 @@ Gem::Specification.new do |s|
   s.add_dependency 'therubyracer'
   s.add_dependency 'i18n_alchemy'
   s.add_dependency 'jquery-fileupload-rails'
+  s.add_dependency 'cancan'
 
   s.add_development_dependency "pg"
 end
