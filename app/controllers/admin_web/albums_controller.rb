@@ -1,5 +1,5 @@
 class AdminWeb::AlbumsController < AdminWeb::ApplicationController
-    before_action :authenticate_user!
+  before_action :authenticate_user!
 
   def index
     @albums = AdminWeb::Album.all.order('id desc')

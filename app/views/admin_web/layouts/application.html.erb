@@ -3,7 +3,6 @@
 <head>
   <title>AdminWeb</title>
   <%= stylesheet_link_tag    "admin_web/application", media: "all" %>
-  <%= javascript_include_tag "admin_web/application" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
@@ -17,8 +16,9 @@
     <div class="col-md-12">
       <%= yield %>
     </div>
+  </div>
 </section>
-</div>
 
 </body>
+<%= javascript_include_tag "admin_web/application" %>
 </html>

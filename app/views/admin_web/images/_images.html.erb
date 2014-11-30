@@ -1,0 +1,10 @@
+<% album.images.order("id asc").in_groups_of(6, false).each do |image_group| %>
+  <% image_group.each do |image| %>
+    <div class="col-md-2">
+      <span><%= flash[:notice] %></span><br />
+      <%= image_tag image.file.url(:thumb_admin) %><br />
+      <%= check_box_tag :cover, image.id, image.cover?, class: "cover" %>
+    </div>
+  <% end %>
+<% end %>
+

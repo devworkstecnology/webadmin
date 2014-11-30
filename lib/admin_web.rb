@@ -3,6 +3,7 @@ require 'simple_form'
 require 'ckeditor'
 require 'carrierwave'
 require 'i18n_alchemy'
+require 'jquery-fileupload-rails'
 require "admin_web/engine"
 
 module AdminWeb

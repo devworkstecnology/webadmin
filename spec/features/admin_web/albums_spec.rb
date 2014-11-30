@@ -52,4 +52,23 @@ feature AdminWeb::Album do
 
     expect(page).to have_content "Registro excluído com sucesso"
   end
+
+  scenario 'add images to album' do
+    create(:admin_web_album)
+
+    click_link 'Álbuns'
+
+    click_link 'Álbum 1'
+
+    expect(page).to have_field "Título", with: "Álbum 1"
+    expect(page).to have_field "Local", with: "Local album 1"
+    expect(page).to have_field "Data", with: I18n.l(Date.current)
+
+    click_link 'Adicionar imagens'
+
+    attach_file('Selecione o(s) arquivo(s)', "spec/fixtures/p3-single.jpg")
+
+    expect(page).to have_no_checked_field 'cover'
+
+  end
 end

@@ -7,4 +7,5 @@ AdminWeb::Engine.routes.draw do
   resources :institutionals
   resources :albums
   resources :videos
+  resources :images
 end
