@@ -1,5 +1,6 @@
 class AdminWeb::InstitutionalsController < AdminWeb::ApplicationController
-    before_action :authenticate_user!
+  before_action :authenticate_user!
+  load_and_authorize_resource
 
   def index
     @institutionals = AdminWeb::Institutional.all.order('id desc')

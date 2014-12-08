@@ -8,4 +8,5 @@ AdminWeb::Engine.routes.draw do
   resources :albums
   resources :videos
   resources :images
+  resources :users
 end

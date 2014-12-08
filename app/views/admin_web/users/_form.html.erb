@@ -1,0 +1,26 @@
+<div class="row">
+  <div class="col-md-8">
+    <div class="well bs-component">
+      <%= simple_form_for @user, html: { class: "form-horizontal", role: "form"} do |f| %>
+
+          <%= f.input :email %>
+
+          <%= f.input :password %>
+
+          <%= f.input :password_confirmation %>
+
+        <hr>
+        <div class="form-actions">
+          <%= f.submit 'Salvar', class: "btn btn-success" %>
+          <%= link_to 'Apagar', @user, method: :delete, data: {confirm: 'Tem certeza que deseja remover esse registro?'}, class: 'btn btn-danger' if f.object.persisted? %>
+          <% if can? :read, AdminWeb::User %>
+            <%= link_to 'Cancelar', users_path, class: 'btn btn-primary' %>
+          <% else %>
+            <%= link_to 'Cancelar', root_path, class: 'btn btn-primary' %>
+          <% end %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+
+</div>
