@@ -8,7 +8,7 @@ module AdminWeb
 
     context "Validations" do
       it { should validate_presence_of :album }
-      it { should validate_presence_of :image }
+      it { should validate_presence_of :file }
     end
   end
 end

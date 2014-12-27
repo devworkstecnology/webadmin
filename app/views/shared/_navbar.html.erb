@@ -14,10 +14,21 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li><%= link_to 'Notícias', posts_path if can? :create, AdminWeb::Post %></li>
-        <li><%= link_to 'Institucionais', institutionals_path if can? :create, AdminWeb::Institutional %></li>
-        <li><%= link_to 'Vídeos', videos_path if can? :create, AdminWeb::Video %></li>
-        <li><%= link_to 'Álbuns', albums_path if can? :create, AdminWeb::Album %></li>
+        <% if can? :create, AdminWeb::Post %>
+          <li><%= link_to 'Notícias', posts_path %></li>
+        <% end %>
+        <% if can? :create, AdminWeb::Institutional %>
+          <li><%= link_to 'Institucionais', institutionals_path %></li>
+        <% end %>
+        <% if can? :create, AdminWeb::Video %>
+          <li><%= link_to 'Vídeos', videos_path %></li>
+        <% end %>
+        <% if can? :create, AdminWeb::Album  %>
+          <li><%= link_to 'Álbuns', albums_path %></li>
+        <% end %>
+        <% if can? :create, AdminWeb::Event  %>
+          <li><%= link_to 'Eventos', events_path %></li>
+        <% end %>
         <% if can? :create, AdminWeb::User %>
           <li><%= link_to 'Usuários', users_path %></li>
         <% end %>

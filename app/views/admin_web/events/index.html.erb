@@ -1,0 +1,35 @@
+<div class="row">
+  <div class="col-md-8">
+    <h4>Cadastro de eventos</h4>
+
+    <div class="row">
+      <div class="col-md-12"><%= link_to 'Novo', new_event_path, class: 'btn btn-primary link-new' %></div>
+    </div>
+
+    <div class="table-responsive">
+      <table class="table table-hover">
+        <thead>
+          <tr>
+            <td>Título</td>
+            <td>Início às</td>
+            <td>Término às</td>
+            <td>Criado em</td>
+          </tr>
+        </thead>
+
+        <tbody>
+          <% @events.each do |event| %>
+            <td><%= link_to event.title, edit_event_path(event) %></td>
+            <td><%= I18n.l event.start_date %></td>
+            <td><%= I18n.l event.end_date %></td>
+            <td><%= I18n.l event.created_at, format: :only_date %></td>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="col-md-4 box">
+    <h4>Pesquisa</h4>
+  </div>
+</div>

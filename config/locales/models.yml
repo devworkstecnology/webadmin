@@ -19,7 +19,20 @@ pt-BR:
       admin_web/video:
         description: "Descrição"
         link: "Link do Youtube"
+
       admin_web/album:
         title: "Título"
         local: "Local"
         date: "Data"
+
+      admin_web/event:
+        title: "Título"
+        start_date: "Início às"
+        end_date: "Término às"
+        description: "Descrição"
+        zipcode: "CEP"
+        street: "Logradouro"
+        number: "Número"
+        neighborhood: "Bairro"
+        city: "Cidade"
+        state: "Estado"

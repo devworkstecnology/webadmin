@@ -12,6 +12,7 @@ class Ability
       can :manage, AdminWeb::Post
       can :manage, AdminWeb::Image
       can :manage, AdminWeb::Video
+      can :manage, AdminWeb::Event
       can [:edit, :update], AdminWeb::User, id: user.id
     end
   end

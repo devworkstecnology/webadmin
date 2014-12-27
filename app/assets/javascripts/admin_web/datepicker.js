@@ -19,4 +19,5 @@ $(function() {
           yearSuffix: ''};
   $.datepicker.setDefaults($.datepicker.regional['pt-BR']);
   $('.date').datepicker({ dateFormat: 'dd/mm/yy' });
+  $('.datetime').datetimepicker({format: 'd/m/Y H:i'});
 });

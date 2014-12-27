@@ -20,7 +20,7 @@ pt-BR:
 
   time:
     formats:
-      default: "%A, %d de %B de %Y, %H:%M h"
+      default: "%d/%m/%Y %H:%M"
       short: "%d/%m, %H:%M h"
       long: "%A, %d de %B de %Y, %H:%M h"
       hour: "%H:%M"
@@ -211,6 +211,7 @@ pt-BR:
         less_than_or_equal_to: "deve ser menor ou igual a %{count}"
         odd: "deve ser ímpar"
         even: "deve ser par"
+        end_date_is_greater_than_start_date: "deve ser maior que o início"
 
         <<: *errors_messages
 
