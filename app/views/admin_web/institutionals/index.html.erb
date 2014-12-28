@@ -17,8 +17,10 @@
 
         <tbody>
           <% @institutionals.each do |institutional| %>
-            <td><%= link_to institutional.name, edit_institutional_path(institutional) %></td>
-            <td><%= I18n.l institutional.created_at, format: :only_date %></td>
+            <tr>
+              <td><%= link_to institutional.name, edit_institutional_path(institutional) %></td>
+              <td><%= I18n.l institutional.created_at, format: :only_date %></td>
+            </tr>
           <% end %>
         </tbody>
       </table>

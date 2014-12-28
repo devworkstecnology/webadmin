@@ -18,9 +18,11 @@
 
         <tbody>
           <% @posts.each do |post| %>
-            <td><%= link_to post.title, edit_post_path(post) %></td>
-            <td><%= post.user %></td>
-            <td><%= I18n.l post.created_at, format: :only_date %></td>
+            <tr>
+              <td><%= link_to post.title, edit_post_path(post) %></td>
+              <td><%= post.user %></td>
+              <td><%= I18n.l post.created_at, format: :only_date %></td>
+            </tr>
           <% end %>
         </tbody>
       </table>

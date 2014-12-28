@@ -19,10 +19,12 @@
 
         <tbody>
           <% @events.each do |event| %>
-            <td><%= link_to event.title, edit_event_path(event) %></td>
-            <td><%= I18n.l event.start_date %></td>
-            <td><%= I18n.l event.end_date %></td>
-            <td><%= I18n.l event.created_at, format: :only_date %></td>
+            <tr>
+              <td><%= link_to event.title, edit_event_path(event) %></td>
+              <td><%= I18n.l event.start_date %></td>
+              <td><%= I18n.l event.end_date %></td>
+              <td><%= I18n.l event.created_at, format: :only_date %></td>
+            </tr>
           <% end %>
         </tbody>
       </table>

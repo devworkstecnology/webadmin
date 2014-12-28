@@ -19,10 +19,12 @@
 
         <tbody>
           <% @albums.each do |album| %>
-            <td><%= link_to album.title, edit_album_path(album) %></td>
-            <td><%= I18n.l album.date %></td>
-            <td><%= album.local %></td>
-            <td><%= I18n.l album.created_at, format: :only_date %></td>
+            <tr>
+              <td><%= link_to album.title, edit_album_path(album) %></td>
+              <td><%= I18n.l album.date %></td>
+              <td><%= album.local %></td>
+              <td><%= I18n.l album.created_at, format: :only_date %></td>
+            </tr>
           <% end %>
         </tbody>
       </table>
