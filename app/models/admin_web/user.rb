@@ -7,8 +7,11 @@ module AdminWeb
     devise :database_authenticatable, :recoverable, :rememberable, :trackable, :validatable
 
     has_many :posts
+    has_many :permissions
 
     has_enumeration_for :user_type, :with => AdminWeb::UserType, create_helpers: true
+
+    accepts_nested_attributes_for :permissions
 
     def to_s
       email

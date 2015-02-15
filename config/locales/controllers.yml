@@ -1,0 +1,9 @@
+pt-BR:
+  controllers:
+    admin_web/albums: "Álbuns"
+    admin_web/events: "Eventos"
+    admin_web/images: "Imagens"
+    admin_web/institutionals: "Institucionais"
+    admin_web/posts: "Notícias"
+    admin_web/users: "Usuários"
+    admin_web/videos: "Vídeos"

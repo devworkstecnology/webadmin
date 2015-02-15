@@ -4,6 +4,7 @@ module AdminWeb
   RSpec.describe User, :type => :model do
     context "Relatioships" do
       it { should have_many :posts }
+      it { should have_many :permissions }
     end
 
     describe "#to_s" do

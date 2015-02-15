@@ -36,3 +36,10 @@ pt-BR:
         neighborhood: "Bairro"
         city: "Cidade"
         state: "Estado"
+
+  enumerations:
+    admin_web/permission_type:
+      read: "Apenas leitura"
+      modify: "Atualizar"
+      access: "Acesso total"
+      deny: "Bloqueado"

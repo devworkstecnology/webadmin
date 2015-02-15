@@ -4,16 +4,11 @@ class Ability
   def initialize(user)
     user ||= AdminWeb::User.new
 
-    if user.admin?
-      can :manage, :all
-    else
-      can :manage, AdminWeb::Album
-      can :manage, AdminWeb::Institutional
-      can :manage, AdminWeb::Post
-      can :manage, AdminWeb::Image
-      can :manage, AdminWeb::Video
-      can :manage, AdminWeb::Event
-      can [:edit, :update], AdminWeb::User, id: user.id
+    alias_action :create, :read, :update, :destroy, :to => :access
+    alias_action :read, :update, to: :modify
+
+    user.permissions.each do |permission|
+      can permission.permission_type.to_sym, eval(permission.model.split('/').map {|k| k.split('_').map {|k| k.capitalize} }.map { |k| k.join }.join('::').singularize)
     end
   end
 end

@@ -10,7 +10,7 @@ feature AdminWeb::Institutional do
 
     expect(page).to have_content 'Cadastro de institucionais'
 
-    click_link 'Nova'
+    click_link 'Novo'
 
     fill_in 'Título', with: "Institucional 1"
     fill_in_ckeditor 'institutional_body', with: "Corpo da primeira página institucional"

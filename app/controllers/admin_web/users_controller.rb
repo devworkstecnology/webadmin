@@ -12,6 +12,10 @@ class AdminWeb::UsersController < AdminWeb::ApplicationController
 
   def new
     @user = AdminWeb::User.new
+
+    current_user.permissions.where(["permission_type <> ?", AdminWeb::PermissionType::DENY]).each do |permission|
+      @user.permissions.build(model: permission.model, permission_type: permission.permission_type)
+    end
   end
 
   def create
@@ -49,6 +53,6 @@ class AdminWeb::UsersController < AdminWeb::ApplicationController
   protected
 
   def permitted_params
-    params.require(:user).permit(:id, :email, :password, :password_confirmation)
+    params.require(:user).permit(:id, :email, :password, :password_confirmation, permissions_attributes: [:id, :permission_type, :model])
   end
 end

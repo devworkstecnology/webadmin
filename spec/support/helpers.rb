@@ -2,7 +2,7 @@
 module Helpers
   def self.included(receiver)
     receiver.let(:current_user) do
-      create(:admin_web_user)
+      create(:admin_web_user_with_permissions)
     end
   end
 
