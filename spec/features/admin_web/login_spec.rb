@@ -6,7 +6,7 @@ RSpec.describe "Login", :type => :feature do
 
     visit admin_web.root_path
 
-    expect(page).to have_content "AdminWeb - Administração de sites"
+    expect(page).to have_content "Acesso"
 
     fill_in 'Email', with: "user@email.com"
     fill_in 'Senha', with: "12345678"
