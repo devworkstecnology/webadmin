@@ -1,48 +1,23 @@
-<nav class="navbar navbar-default" role="navigation">
-  <div class="container-fluid">
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <%= link_to 'AdminWeb', root_path, class: "navbar-brand"%>
-    </div>
-
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav">
-        <% if can? :read, AdminWeb::Post %>
-          <li><%= link_to 'Notícias', posts_path %></li>
-        <% end %>
-        <% if can? :read, AdminWeb::Institutional %>
-          <li><%= link_to 'Institucionais', institutionals_path %></li>
-        <% end %>
-        <% if can? :read, AdminWeb::Video %>
-          <li><%= link_to 'Vídeos', videos_path %></li>
-        <% end %>
-        <% if can? :read, AdminWeb::Album  %>
-          <li><%= link_to 'Álbuns', albums_path %></li>
-        <% end %>
-        <% if can? :read, AdminWeb::Event  %>
-          <li><%= link_to 'Eventos', events_path %></li>
-        <% end %>
-        <% if can? :read, AdminWeb::User %>
-          <li><%= link_to 'Usuários', users_path %></li>
-        <% end %>
-      </ul>
-      <ul class="nav navbar-nav navbar-right">
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown"><%= current_user.email %> <span class="caret"></span></a>
-          <ul class="dropdown-menu" role="menu">
-            <li><%= link_to 'Editar dados', edit_user_path(current_user)%></li>
-            <li class="divider"></li>
-            <li><%= link_to "Sair", destroy_user_session_path, method: :delete %></li>
-          </ul>
-        </li>
-      </ul>
-    </div><!-- /.navbar-collapse -->
-  </div><!-- /.container-fluid -->
+<nav id="nav" class="nav-primary hidden-xs nav-vertical">
+  <ul class="nav" data-spy="affix" data-offset-top="50">
+    <li class="active"><a href="index.html"><i class="fa fa-dashboard fa-lg"></i><span>Dashboard</span></a></li>
+    <% if can? :read, AdminWeb::Post %>
+      <%= menu_link AdminWeb::Post.model_name.human(count: "many"), 'fa fa-file-text-o fa-lg', 'posts', posts_path %>
+    <% end %>
+    <% if can? :read, AdminWeb::Institutional %>
+      <%= menu_link AdminWeb::Institutional.model_name.human(count: "many"), 'fa fa-file-text-o fa-lg', 'institutionals',institutionals_path %>
+    <% end %>
+    <% if can? :read, AdminWeb::Video %>
+      <%= menu_link AdminWeb::Video.model_name.human(count: "many"), 'fa fa-video-camera fa-lg', 'videos', videos_path %>
+    <% end %>
+    <% if can? :read, AdminWeb::Album  %>
+      <%= menu_link AdminWeb::Album.model_name.human(count: "many"), 'fa fa-camera fa-lg', 'albums', albums_path %>
+    <% end %>
+    <% if can? :read, AdminWeb::Event  %>
+      <%= menu_link AdminWeb::Event.model_name.human(count: "many"), 'fa fa-calendar fa-lg', 'events', events_path %>
+    <% end %>
+    <% if can? :read, AdminWeb::User %>
+      <%= menu_link AdminWeb::User.model_name.human(count: "many"), 'fa fa-user fa-lg', 'users', users_path %>
+    <% end %>
+  </ul>
 </nav>
