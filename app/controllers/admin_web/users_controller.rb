@@ -1,53 +1,10 @@
-class AdminWeb::UsersController < AdminWeb::ApplicationController
-  before_action :authenticate_user!
-  load_and_authorize_resource
-
-  def index
-    @users = AdminWeb::User.all.order('id desc')
-  end
-
-  def show
-    @user = AdminWeb::User.find(params[:id])
-  end
-
+class AdminWeb::UsersController < AdminWeb::CrudController
   def new
-    @user = AdminWeb::User.new
+    super
 
     current_user.permissions.where(["permission_type <> ?", AdminWeb::PermissionType::DENY]).each do |permission|
-      @user.permissions.build(model: permission.model, permission_type: permission.permission_type)
+      @object.permissions.build(model: permission.model, permission_type: permission.permission_type)
     end
-  end
-
-  def create
-    @user = AdminWeb::User.new(permitted_params)
-    @user.convencional!
-
-    if @user.save
-      redirect_to users_path, :notice => "Cadastro realizado com sucesso"
-    else
-      render :new
-    end
-  end
-
-  def edit
-    @user = AdminWeb::User.find(params[:id])
-  end
-
-  def update
-    @user = AdminWeb::User.find(params[:id])
-
-    if @user.update_attributes(permitted_params)
-      redirect_to users_path, :notice => "Alteração realizada com sucesso"
-    else
-      render :new
-    end
-  end
-
-  def destroy
-    @user = AdminWeb::User.find(params[:id])
-    @user.destroy
-
-    redirect_to users_path, :notice => "Registro excluído com sucesso"
   end
 
   protected

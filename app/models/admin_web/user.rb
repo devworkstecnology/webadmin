@@ -1,5 +1,6 @@
 module AdminWeb
   class User < ActiveRecord::Base
+    include I18n::Alchemy
     extend EnumerateIt
 
     # Include default devise modules. Others available are:

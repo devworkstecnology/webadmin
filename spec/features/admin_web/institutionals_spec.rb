@@ -17,7 +17,7 @@ feature AdminWeb::Institutional do
 
     click_button 'Salvar'
 
-    expect(page).to have_content "Cadastro realizado com sucesso"
+    expect(page).to have_content "Institucional criado(a) com sucesso"
 
     expect(page).to have_content "Institucional 1"
     expect(page).to have_content I18n.l(Date.current)
@@ -31,7 +31,7 @@ feature AdminWeb::Institutional do
 
     click_button "Salvar"
 
-    expect(page).to have_content "Alteração realizada com sucesso"
+    expect(page).to have_content "Institucional editado(a) com sucesso"
 
     expect(page).to have_content "Alterando a institucional 1"
     expect(page).to have_content I18n.l(Date.current)
@@ -42,6 +42,6 @@ feature AdminWeb::Institutional do
 
     click_link 'Apagar'
 
-    expect(page).to have_content "Registro excluído com sucesso"
+    expect(page).to have_content "Institucional apagado(a) com sucesso"
   end
 end

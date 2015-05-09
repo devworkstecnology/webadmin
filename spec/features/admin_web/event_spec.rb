@@ -25,7 +25,7 @@ feature AdminWeb::Event do
 
     click_button 'Salvar'
 
-    expect(page).to have_content "Cadastro realizado com sucesso"
+    expect(page).to have_content "Evento criado(a) com sucesso"
 
     expect(page).to have_content "Evento 1"
     expect(page).to have_content "30/01/2015 21:00"
@@ -58,7 +58,7 @@ feature AdminWeb::Event do
 
     click_button "Salvar"
 
-    expect(page).to have_content "Alteração realizada com sucesso"
+    expect(page).to have_content "Evento editado(a) com sucesso"
 
     expect(page).to have_content "Alterando Evento 1"
     expect(page).to have_content "01/02/2015 21:00"
@@ -80,6 +80,6 @@ feature AdminWeb::Event do
 
     click_link 'Apagar'
 
-    expect(page).to have_content "Registro excluído com sucesso"
+    expect(page).to have_content "Evento apagado(a) com sucesso"
   end
 end

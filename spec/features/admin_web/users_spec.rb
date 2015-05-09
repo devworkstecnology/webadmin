@@ -24,7 +24,7 @@ feature AdminWeb::User do
 
     click_button 'Salvar'
 
-    expect(page).to have_content "Cadastro realizado com sucesso"
+    expect(page).to have_content "Usuário criado(a) com sucesso"
 
     expect(page).to have_content "email@email.com"
     expect(page).to have_content I18n.l(Date.current)
@@ -51,7 +51,7 @@ feature AdminWeb::User do
 
     click_button "Salvar"
 
-    expect(page).to have_content "Alteração realizada com sucesso"
+    expect(page).to have_content "Usuário editado(a) com sucesso"
 
     expect(page).to have_content "email1@email.com"
     expect(page).to have_content I18n.l(Date.current)
@@ -68,6 +68,6 @@ feature AdminWeb::User do
 
     click_link 'Apagar'
 
-    expect(page).to have_content "Registro excluído com sucesso"
+    expect(page).to have_content "Usuário apagado(a) com sucesso"
   end
 end

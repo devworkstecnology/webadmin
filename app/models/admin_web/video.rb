@@ -1,5 +1,7 @@
 module AdminWeb
   class Video < ActiveRecord::Base
+    include I18n::Alchemy
+    
     validates :description, :link, presence: true
 
     before_save :extract_id

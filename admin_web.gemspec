@@ -31,6 +31,7 @@ Gem::Specification.new do |s|
   s.add_dependency 'cancan'
   s.add_dependency 'enumerate_it'
   s.add_dependency 'mini_magick'
+  s.add_dependency 'responders'
 
   s.add_development_dependency "pg"
 end

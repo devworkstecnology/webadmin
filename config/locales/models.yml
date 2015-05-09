@@ -1,5 +1,14 @@
 pt-BR:
   activerecord:
+    models:
+      album: "Álbum"
+      event: "Evento"
+      image: "Imagem"
+      institutional: "Institucional"
+      post: "Notícia"
+      user: "Usuário"
+      video: "Vídeo"
+
     attributes:
       admin_web/user:
         email: "Email"

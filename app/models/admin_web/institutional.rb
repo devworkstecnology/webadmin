@@ -1,5 +1,6 @@
 module AdminWeb
   class Institutional < ActiveRecord::Base
+    include I18n::Alchemy
 
     validates :name, :body, presence: true
 

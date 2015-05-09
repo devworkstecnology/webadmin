@@ -1,5 +1,6 @@
 module AdminWeb
   class Post < ActiveRecord::Base
+    include I18n::Alchemy
     mount_uploader :image, ImagePostUploader
 
     belongs_to :user

@@ -17,7 +17,7 @@ feature AdminWeb::Video do
 
     click_button 'Salvar'
 
-    expect(page).to have_content "Cadastro realizado com sucesso"
+    expect(page).to have_content "Vídeo criado(a) com sucesso"
 
     expect(page).to have_content "Primeiro vídeo"
     expect(page).to have_content "uzxpH-MtIts"
@@ -33,7 +33,7 @@ feature AdminWeb::Video do
 
     click_button "Salvar"
 
-    expect(page).to have_content "Alteração realizada com sucesso"
+    expect(page).to have_content "Vídeo editado(a) com sucesso"
 
     expect(page).to have_content "Alterando a Primeiro vídeo"
     expect(page).to have_content "uzxpH-MtItsdadada"
@@ -46,6 +46,6 @@ feature AdminWeb::Video do
 
     click_link 'Apagar'
 
-    expect(page).to have_content "Registro excluído com sucesso"
+    expect(page).to have_content "Vídeo apagado(a) com sucesso"
   end
 end

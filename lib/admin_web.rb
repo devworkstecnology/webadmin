@@ -6,6 +6,7 @@ require 'i18n_alchemy'
 require 'jquery-fileupload-rails'
 require 'enumerate_it'
 require 'cancan'
+require 'responders'
 require "admin_web/engine"
 
 module AdminWeb

@@ -1,17 +1,17 @@
 <div class="row">
   <div class="col-md-8">
     <div class="well bs-component">
-      <%= simple_form_for @album, html: { class: "form-horizontal", role: "form"} do |f| %>
+      <%= simple_form_for @object, html: { class: "form-horizontal", role: "form"} do |f| %>
 
           <%= f.input :title %>
           <%= f.input :local %>
-          <%= f.input :date, as: :string, :input_html => { class: "date" } %>
+          <%= f.input :date, as: :string, :input_html => { class: "datepicker", data: { "date-format" => "dd/mm/yyyy" }} %>
 
         <hr>
         <div class="form-actions">
           <%= f.submit 'Salvar', class: "btn btn-success" %>
-          <%= link_to 'Apagar', @album, method: :delete, data: {confirm: 'Tem certeza que deseja remover esse registro?'}, class: 'btn btn-danger' if f.object.persisted? %>
-          <%= link_to "Adicionar imagens", @album, class: 'btn btn-primary'  if f.object.persisted? %>
+          <%= link_to 'Apagar', @object, method: :delete, data: {confirm: 'Tem certeza que deseja remover esse registro?'}, class: 'btn btn-danger' if f.object.persisted? %>
+          <%= link_to "Adicionar imagens", @object, class: 'btn btn-primary'  if f.object.persisted? %>
           <%= link_to 'Cancelar', albums_path, class: 'btn btn-primary' %>
         </div>
       <% end %>
