@@ -2,6 +2,7 @@
   $('#new_image').fileupload({
     add: function(e, data) {
       var file, types;
+      console.log("AAAAAA");
       types = /(\.|\/)(jpeg|jpg|png|gif)$/i;
       file = data.files[0];
       if (types.test(file.type) || types.test(file.name)) {

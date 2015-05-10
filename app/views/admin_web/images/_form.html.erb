@@ -1,21 +1,23 @@
 <div class="row">
-  <div class="col-md-8">
-    <div class="well bs-component">
-      <div class="row images">
-        <%= render 'admin_web/images/images', album: @album %>
-      </div>
-      <script id="template-upload" type="text/x-tmpl">
-        <div class="upload">
-          {%=o.name%}
-          <div class="progress"><div class="bar" style="width: 0%; background-color: green;">&nbsp;</div></div>
+  <div class="col-md-12">
+    <div class="panel">
+      <div class="panel-body">
+        <div class="row images">
+          <%= render 'admin_web/images/images', album: @album %>
         </div>
-      </script>
+        <script id="template-upload" type="text/x-tmpl">
+          <div class="upload">
+            {%=o.name%}
+            <div class="progress"><div class="bar" style="width: 0%; background-color: green;">&nbsp;</div></div>
+          </div>
+        </script>
 
-      <%= simple_form_for AdminWeb::Image.new, html: { class: "form-horizontal", role: "form", multipart: true} do |f| %>
-        <%= f.input :album_id, as: :hidden, input_html: { value: @album.id } %>
-        <%= f.input :file, as: :file, label: false, :input_html => { class: "filestyle", multiple: true } %>
-      <% end %>
+        <%= simple_form_for AdminWeb::Image.new, html: { class: "form-horizontal", role: "form", multipart: true} do |f| %>
+          <%= f.input :album_id, as: :hidden, input_html: { value: @album.id } %>
+          <%= f.input :file, as: :file, label: false, :input_html => { class: "filestyle", multiple: true } %>
+        <% end %>
+      </div>
     </div>
-  </div>
 
+  </div>
 </div>

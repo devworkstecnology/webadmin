@@ -18,7 +18,7 @@ feature AdminWeb::Album do
 
     click_button 'Salvar'
 
-    expect(page).to have_content "Álbum cadastrado com sucesso"
+    expect(page).to have_content "Álbum criado(a) com sucesso"
 
     expect(page).to have_content "Álbum 1"
     expect(page).to have_content "Local Álbum 1"
@@ -36,7 +36,7 @@ feature AdminWeb::Album do
 
     click_button "Salvar"
 
-    expect(page).to have_content "Álbum editado com sucesso"
+    expect(page).to have_content "Álbum editado(a) com sucesso"
 
     expect(page).to have_content "Alterando o álbum 1"
     expect(page).to have_content "Alterando o Local Álbum 1"
@@ -50,7 +50,7 @@ feature AdminWeb::Album do
 
     click_link 'Apagar'
 
-    expect(page).to have_content "Álbum excluído com sucesso"
+    expect(page).to have_content "Álbum apagado(a) com sucesso"
   end
 
   scenario 'add images to album' do

@@ -1,35 +1,37 @@
 <div class="row">
-  <div class="col-md-8">
-    <div class="well bs-component">
-      <%= simple_form_for @object, html: { class: "form-horizontal", role: "form"} do |f| %>
+  <div class="col-md-12">
+    <div class="panel">
+      <div class="panel-body">
+        <%= simple_form_for @object, html: { class: "form-horizontal", role: "form"} do |f| %>
 
-        <%= f.input :title, input_html: { class: 'col-md-8' } %>
+          <%= f.input :title, input_html: { class: 'col-md-8' } %>
 
-        <%= f.input :start_date, as: :string, :input_html => { class: "datetime" } %>
+          <%= f.input :start_date, as: :string, :input_html => { class: "datetime" } %>
 
-        <%= f.input :end_date, as: :string, :input_html => { class: "datetime" } %>
+          <%= f.input :end_date, as: :string, :input_html => { class: "datetime" } %>
 
-        <%= f.input :description %>
+          <%= f.input :description %>
 
-        <%= f.input :zipcode %>
+          <%= f.input :zipcode %>
 
-        <%= f.input :street %>
+          <%= f.input :street %>
 
-        <%= f.input :number %>
+          <%= f.input :number %>
 
-        <%= f.input :neighborhood %>
+          <%= f.input :neighborhood %>
 
-        <%= f.input :city %>
+          <%= f.input :city %>
 
-        <%= f.input :state %>
-        <hr>
-        <div class="form-actions">
-          <%= f.submit 'Salvar', class: "btn btn-success" %>
-          <%= link_to 'Apagar', @object, method: :delete, data: {confirm: 'Tem certeza que deseja remover esse registro?'}, class: 'btn btn-danger' if f.object.persisted? %>
-          <%= link_to 'Cancelar', events_path, class: 'btn btn-primary' %>
-        </div>
-      <% end %>
+          <%= f.input :state %>
+          <hr>
+          <div class="form-actions">
+            <%= f.submit 'Salvar', class: "btn btn-success" %>
+            <%= link_to 'Apagar', @object, method: :delete, data: {confirm: 'Tem certeza que deseja remover esse registro?'}, class: 'btn btn-danger' if f.object.persisted? %>
+            <%= link_to 'Cancelar', events_path, class: 'btn btn-primary' %>
+          </div>
+        <% end %>
+      </div>
     </div>
-  </div>
 
+  </div>
 </div>

@@ -1,20 +1,22 @@
 <div class="row">
-  <div class="col-md-8">
-    <div class="well bs-component">
-      <%= simple_form_for @object, html: { class: "form-horizontal", role: "form"} do |f| %>
+  <div class="col-md-12">
+    <div class="panel">
+      <div class="panel-body">
+        <%= simple_form_for @object, html: { class: "form-horizontal", role: "form"} do |f| %>
 
-          <%= f.input :name %>
+            <%= f.input :name %>
 
-          <%= f.input :body, :as => :ckeditor, :input_html => { :ckeditor => {:toolbar => 'Full'} } %>
+            <%= f.input :body, :as => :ckeditor, :input_html => { :ckeditor => {:toolbar => 'Full'} } %>
 
-        <hr>
-        <div class="form-actions">
-          <%= f.submit 'Salvar', class: "btn btn-success" %>
-          <%= link_to 'Apagar', @object, method: :delete, data: {confirm: 'Tem certeza que deseja remover esse registro?'}, class: 'btn btn-danger' if f.object.persisted? %>
-          <%= link_to 'Cancelar', institutionals_path, class: 'btn btn-primary' %>
-        </div>
-      <% end %>
+          <hr>
+          <div class="form-actions">
+            <%= f.submit 'Salvar', class: "btn btn-success" %>
+            <%= link_to 'Apagar', @object, method: :delete, data: {confirm: 'Tem certeza que deseja remover esse registro?'}, class: 'btn btn-danger' if f.object.persisted? %>
+            <%= link_to 'Cancelar', institutionals_path, class: 'btn btn-primary' %>
+          </div>
+        <% end %>
+      </div>
     </div>
-  </div>
 
+  </div>
 </div>
