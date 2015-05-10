@@ -7,15 +7,16 @@ require "web_admin/version"
 Gem::Specification.new do |s|
   s.name        = "web_admin"
   s.version     = WebAdmin::VERSION
-  s.authors     = ["Devwors Soluções e Tecnologia", "Rodrigo Ulisses e Silva"]
-  s.email       = ["contato@devworks.net.br", "rodrigo.ulisses7@gmail.com"]
-  s.homepage    = "TODO"
-  s.summary     = "TODO: Summary of WebAdmin."
-  s.description = "TODO: Description of WebAdmin."
+  s.authors     = ["Devworks Soluções e Tecnologia"]
+  s.email       = ["contato@devworks.net.br"]
+  s.homepage    = "http://www.devworks.net.br"
+  s.summary     = "Sistema administrativo para site"
+  s.description = "Sistema administrativo para site"
   s.license     = "MIT"
 
-  s.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.rdoc"]
-  s.test_files = 'git ls-files -- {test,spec,features}/*'.split("\n")
+  s.files         = `git ls-files`.split("\n").sort
+  s.test_files    = `git ls-files -- {spec}/*`.split("\n")
+
 
   s.add_dependency "rails", "~> 4.1.6"
   s.add_dependency "simple_form"
