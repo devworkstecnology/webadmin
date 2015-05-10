@@ -1,6 +1,6 @@
 require "rails_helper"
 
-feature AdminWeb::User do
+feature WebAdmin::User do
   background do
     sign_in
   end

@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-module AdminWeb
+module WebAdmin
   RSpec.describe Event, :type => :model do
     context "Validations" do
       it { should validate_presence_of :title }

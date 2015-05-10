@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-feature AdminWeb::Post do
+feature WebAdmin::Post do
   background do
     sign_in
   end

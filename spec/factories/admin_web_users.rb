@@ -1,10 +1,10 @@
 FactoryGirl.define do
-  factory :admin_web_user, :class => 'AdminWeb::User' do
+  factory :web_admin_user, :class => 'WebAdmin::User' do
     email "user@email.com"
     password "12345678"
     password_confirmation "12345678"
 
-    factory :admin_web_user_with_permission do
+    factory :web_admin_user_with_permission do
       transient do
         permissions_count 1
       end

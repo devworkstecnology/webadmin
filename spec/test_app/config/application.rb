@@ -9,7 +9,7 @@ require "sprockets/railtie"
 # require "rails/test_unit/railtie"
 
 Bundler.require(*Rails.groups)
-require "admin_web"
+require "web_admin"
 
 module TestApp
   class Application < Rails::Application

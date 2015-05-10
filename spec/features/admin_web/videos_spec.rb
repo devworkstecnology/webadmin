@@ -1,6 +1,6 @@
 require "rails_helper"
 
-feature AdminWeb::Video do
+feature WebAdmin::Video do
   background do
     sign_in
   end

@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-feature AdminWeb::Album do
+feature WebAdmin::Album do
   background do
     sign_in
   end
@@ -54,7 +54,7 @@ feature AdminWeb::Album do
   end
 
   scenario 'add images to album' do
-    create(:admin_web_album)
+    create(:web_admin_album)
 
     click_link 'Álbuns'
 

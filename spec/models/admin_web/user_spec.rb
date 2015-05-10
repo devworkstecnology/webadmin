@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-module AdminWeb
+module WebAdmin
   RSpec.describe User, :type => :model do
     context "Relatioships" do
       it { should have_many :posts }

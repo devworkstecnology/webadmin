@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-module AdminWeb
+module WebAdmin
   RSpec.describe Image, :type => :model do
     context "Relationships" do
       it { should belong_to :album }

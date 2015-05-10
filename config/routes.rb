@@ -1,6 +1,6 @@
-AdminWeb::Engine.routes.draw do
+WebAdmin::Engine.routes.draw do
   mount Ckeditor::Engine => '/ckeditor'
-  devise_for :users, class_name: "AdminWeb::User", module: :devise
+  devise_for :users, class_name: "WebAdmin::User", module: :devise
   root "main#index"
 
   resources :posts

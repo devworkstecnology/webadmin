@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-module AdminWeb
+module WebAdmin
   RSpec.describe Permission, :type => :model do
     context "Relatioships" do
       it { should belong_to :user }

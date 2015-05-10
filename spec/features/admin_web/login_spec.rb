@@ -2,9 +2,9 @@ require 'rails_helper'
 
 RSpec.describe "Login", :type => :feature do
   it "login" do
-    user = create(:admin_web_user)
+    user = create(:web_admin_user)
 
-    visit admin_web.root_path
+    visit web_admin.root_path
 
     expect(page).to have_content "Acesso"
 

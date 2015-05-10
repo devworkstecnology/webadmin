@@ -1,19 +1,19 @@
 require 'rails_helper'
 
-feature AdminWeb::Permission do
+feature WebAdmin::Permission do
   scenario "verify permission to user" do
-    user = create(:admin_web_user)
+    user = create(:web_admin_user)
     user.permissions = [
-      create(:manage_post, permission_type: AdminWeb::PermissionType::DENY),
-      create(:manage_user, permission_type: AdminWeb::PermissionType::ACCESS),
-      create(:manage_video, permission_type: AdminWeb::PermissionType::READ),
-      create(:manage_album, permission_type: AdminWeb::PermissionType::ACCESS),
-      create(:manage_image, permission_type: AdminWeb::PermissionType::ACCESS),
-      create(:manage_institutional, permission_type: AdminWeb::PermissionType::MODIFY),
-      create(:manage_event, permission_type: AdminWeb::PermissionType::ACCESS),
+      create(:manage_post, permission_type: WebAdmin::PermissionType::DENY),
+      create(:manage_user, permission_type: WebAdmin::PermissionType::ACCESS),
+      create(:manage_video, permission_type: WebAdmin::PermissionType::READ),
+      create(:manage_album, permission_type: WebAdmin::PermissionType::ACCESS),
+      create(:manage_image, permission_type: WebAdmin::PermissionType::ACCESS),
+      create(:manage_institutional, permission_type: WebAdmin::PermissionType::MODIFY),
+      create(:manage_event, permission_type: WebAdmin::PermissionType::ACCESS),
     ]
 
-    visit admin_web.root_path
+    visit web_admin.root_path
     fill_in 'Email', with: user.email
     fill_in 'Senha', with: user.password
 
@@ -26,10 +26,10 @@ feature AdminWeb::Permission do
     expect(page).to have_link 'Usuários'
     expect(page).to have_link 'Eventos'
 
-    visit '/admin_web/posts'
+    visit '/web_admin/posts'
     expect(page).to have_content "Você não tem acesso a essa página. Contate o administrador do sistema, para maiores informações."
 
-    visit admin_web.root_path
+    visit web_admin.root_path
 
     click_link 'Institucionais'
 

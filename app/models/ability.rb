@@ -2,7 +2,7 @@ class Ability
   include CanCan::Ability
 
   def initialize(user)
-    user ||= AdminWeb::User.new
+    user ||= WebAdmin::User.new
 
     alias_action :create, :read, :update, :destroy, :to => :access
     alias_action :read, :update, to: :modify

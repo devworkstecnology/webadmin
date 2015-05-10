@@ -2,12 +2,12 @@
 module Helpers
   def self.included(receiver)
     receiver.let(:current_user) do
-      create(:admin_web_user_with_permissions)
+      create(:web_admin_user_with_permissions)
     end
   end
 
   def sign_in(options={})
-    visit admin_web.root_path
+    visit web_admin.root_path
     fill_in 'Email', with: current_user.email
     fill_in 'Senha', with: current_user.password
 

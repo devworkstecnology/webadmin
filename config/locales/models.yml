@@ -10,31 +10,31 @@ pt-BR:
       video: "Vídeo"
 
     attributes:
-      admin_web/user:
+      web_admin/user:
         email: "Email"
         password: "Senha"
         password_confirmation: "Confirmação de senha"
 
-      admin_web/post:
+      web_admin/post:
         title: "Título"
         abstract: "Resumo"
         image: "Imagem"
         body: "Notícia"
 
-      admin_web/institutional:
+      web_admin/institutional:
         name: "Título"
         body: "Conteúdo"
 
-      admin_web/video:
+      web_admin/video:
         description: "Descrição"
         link: "Link do Youtube"
 
-      admin_web/album:
+      web_admin/album:
         title: "Título"
         local: "Local"
         date: "Data"
 
-      admin_web/event:
+      web_admin/event:
         title: "Título"
         start_date: "Início às"
         end_date: "Término às"
@@ -47,7 +47,7 @@ pt-BR:
         state: "Estado"
 
   enumerations:
-    admin_web/permission_type:
+    web_admin/permission_type:
       read: "Apenas leitura"
       modify: "Atualizar"
       access: "Acesso total"

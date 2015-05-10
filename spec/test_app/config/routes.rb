@@ -1,4 +1,4 @@
 Rails.application.routes.draw do
 
-  mount AdminWeb::Engine => "/admin_web"
+  mount WebAdmin::Engine => "/web_admin"
 end

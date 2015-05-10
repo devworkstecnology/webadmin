@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-feature AdminWeb::Event do
+feature WebAdmin::Event do
   background do
     sign_in
   end

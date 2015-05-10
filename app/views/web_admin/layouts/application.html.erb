@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>WebAdmin</title>
+  <%= stylesheet_link_tag    "web_admin/application", media: "all" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+  <!-- header -->
+  <header id="header" class="navbar">
+    <%= render 'shared/header' %>
+  </header>
+  <!-- / header -->
+  <!-- nav -->
+  <%= render 'shared/navbar' %>
+  <!-- / nav -->
+  <section id="content">
+    <section class="main padder">
+      <div class="row">
+        <div class="col-lg-12">
+          <%= render 'shared/notice' %>
+          <section>
+            <%= yield %>
+          </section>
+        </div>
+
+      </div>
+    </section>
+  </section>
+  <!-- .modal -->
+  <div id="modal" class="modal fade">
+    <form class="m-b-none">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal"><i class="fa fa-times"></i></button>
+            <h4 class="modal-title" id="myModalLabel">Post your first idea</h4>
+          </div>
+          <div class="modal-body">
+            <div class="block">
+              <label class="control-label">Title</label>
+              <input type="text" class="form-control" placeholder="Post title">
+            </div>
+            <div class="block">
+              <label class="control-label">Content</label>
+              <textarea class="form-control" placeholder="Content" rows="5"></textarea>
+            </div>
+            <div class="checkbox">
+              <label>
+                <input type="checkbox"> Share with all memebers of first
+              </label>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-sm btn-default" data-dismiss="modal">Save</button>
+            <button type="button" class="btn btn-sm btn-primary" data-loading-text="Publishing...">Publish</button>
+          </div>
+        </div><!-- /.modal-content -->
+      </div>
+    </form>
+  </div>
+  <!-- / .modal -->
+  <!-- footer -->
+  <footer id="footer">
+    <div class="text-center padder clearfix">
+      <p>
+        <small>&copy; WebAdmin 2014, Administração de sites</small><br><br>
+        <a href="#" class="btn btn-xs btn-circle btn-twitter"><i class="fa fa-twitter"></i></a>
+        <a href="#" class="btn btn-xs btn-circle btn-facebook"><i class="fa fa-facebook"></i></a>
+        <a href="#" class="btn btn-xs btn-circle btn-gplus"><i class="fa fa-google-plus"></i></a>
+      </p>
+    </div>
+  </footer>
+  <a href="#" class="hide slide-nav-block" data-toggle="class:slide-nav slide-nav-left" data-target="body"></a>
+</body>
+<%= javascript_include_tag "web_admin/application" %>
+</html>

@@ -1,0 +1,35 @@
+<div class="row">
+  <div class="col-md-8">
+    <h4>Cadastro de institucionais</h4>
+
+    <% if can? :create, WebAdmin::Institutional %>
+      <div class="row">
+        <div class="col-md-12"><%= link_to 'Novo', new_institutional_path, class: 'btn btn-primary link-new' %></div>
+      </div>
+    <% end %>
+
+    <div class="table-responsive">
+      <table class="table table-hover">
+        <thead>
+          <tr>
+            <td>Título</td>
+            <td>Criado em</td>
+          </tr>
+        </thead>
+
+        <tbody>
+          <% @institutionals.each do |institutional| %>
+            <tr>
+              <td><%= link_to institutional.name, edit_institutional_path(institutional) %></td>
+              <td><%= I18n.l institutional.created_at, format: :only_date %></td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="col-md-4 box">
+    <h4>Pesquisa</h4>
+  </div>
+</div>

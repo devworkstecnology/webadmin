@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    admin_web (0.0.1)
+    web_admin (0.0.1)
       cancan
       carrierwave
       ckeditor
@@ -320,7 +320,6 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  admin_web!
   capybara
   capybara-screenshot
   database_cleaner
@@ -333,3 +332,4 @@ DEPENDENCIES
   selenium-webdriver
   shoulda-matchers
   simplecov
+  web_admin!

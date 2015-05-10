@@ -1,23 +1,23 @@
 <nav id="nav" class="nav-primary hidden-xs nav-vertical">
   <ul class="nav" data-spy="affix" data-offset-top="50">
     <li class="active"><a href="index.html"><i class="fa fa-dashboard fa-lg"></i><span>Dashboard</span></a></li>
-    <% if can? :read, AdminWeb::Post %>
-      <%= menu_link I18n.t('controllers.admin_web/posts'), 'fa fa-file-text-o fa-lg', 'posts', posts_path %>
+    <% if can? :read, WebAdmin::Post %>
+      <%= menu_link I18n.t('controllers.web_admin/posts'), 'fa fa-file-text-o fa-lg', 'posts', posts_path %>
     <% end %>
-    <% if can? :read, AdminWeb::Institutional %>
-      <%= menu_link I18n.t('controllers.admin_web/institutionals'), 'fa fa-file-text-o fa-lg', 'institutionals',institutionals_path %>
+    <% if can? :read, WebAdmin::Institutional %>
+      <%= menu_link I18n.t('controllers.web_admin/institutionals'), 'fa fa-file-text-o fa-lg', 'institutionals',institutionals_path %>
     <% end %>
-    <% if can? :read, AdminWeb::Video %>
-      <%= menu_link I18n.t('controllers.admin_web/videos'), 'fa fa-video-camera fa-lg', 'videos', videos_path %>
+    <% if can? :read, WebAdmin::Video %>
+      <%= menu_link I18n.t('controllers.web_admin/videos'), 'fa fa-video-camera fa-lg', 'videos', videos_path %>
     <% end %>
-    <% if can? :read, AdminWeb::Album  %>
-      <%= menu_link I18n.t('controllers.admin_web/albums'), 'fa fa-camera fa-lg', 'albums', albums_path %>
+    <% if can? :read, WebAdmin::Album  %>
+      <%= menu_link I18n.t('controllers.web_admin/albums'), 'fa fa-camera fa-lg', 'albums', albums_path %>
     <% end %>
-    <% if can? :read, AdminWeb::Event  %>
-      <%= menu_link I18n.t('controllers.admin_web/events'), 'fa fa-calendar fa-lg', 'events', events_path %>
+    <% if can? :read, WebAdmin::Event  %>
+      <%= menu_link I18n.t('controllers.web_admin/events'), 'fa fa-calendar fa-lg', 'events', events_path %>
     <% end %>
-    <% if can? :read, AdminWeb::User %>
-      <%= menu_link I18n.t('controllers.admin_web/users'), 'fa fa-user fa-lg', 'users', users_path %>
+    <% if can? :read, WebAdmin::User %>
+      <%= menu_link I18n.t('controllers.web_admin/users'), 'fa fa-user fa-lg', 'users', users_path %>
     <% end %>
   </ul>
 </nav>

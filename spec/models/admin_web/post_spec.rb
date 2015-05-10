@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-module AdminWeb
+module WebAdmin
   RSpec.describe Post, :type => :model do
     context "Validations" do
       it { should validate_presence_of :user_id }
