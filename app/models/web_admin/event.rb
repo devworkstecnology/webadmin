@@ -1,6 +1,7 @@
 module WebAdmin
   class Event < ActiveRecord::Base
     include I18n::Alchemy
+    mount_uploader :image, ImageEventUploader
 
     validates :title, :start_date, :end_date, :description, presence: true
     validate :end_date_is_greater_than_start_date

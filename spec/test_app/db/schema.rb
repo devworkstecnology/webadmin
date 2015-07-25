@@ -11,10 +11,40 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150510191213) do
+ActiveRecord::Schema.define(version: 20150725151008) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "admin_web_posts", force: true do |t|
+    t.integer  "user_id",    null: false
+    t.string   "title",      null: false
+    t.string   "abstract"
+    t.text     "body",       null: false
+    t.string   "image"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "admin_web_posts", ["user_id"], name: "index_admin_web_posts_on_user_id", using: :btree
+
+  create_table "admin_web_users", force: true do |t|
+    t.string   "email",                  default: "", null: false
+    t.string   "encrypted_password",     default: "", null: false
+    t.string   "reset_password_token"
+    t.datetime "reset_password_sent_at"
+    t.datetime "remember_created_at"
+    t.integer  "sign_in_count",          default: 0,  null: false
+    t.datetime "current_sign_in_at"
+    t.datetime "last_sign_in_at"
+    t.string   "current_sign_in_ip"
+    t.string   "last_sign_in_ip"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "admin_web_users", ["email"], name: "index_admin_web_users_on_email", unique: true, using: :btree
+  add_index "admin_web_users", ["reset_password_token"], name: "index_admin_web_users_on_reset_password_token", unique: true, using: :btree
 
   create_table "ckeditor_assets", force: true do |t|
     t.string   "data_file_name",               null: false
@@ -53,6 +83,7 @@ ActiveRecord::Schema.define(version: 20150510191213) do
     t.string   "state",        null: false
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "image"
   end
 
   create_table "web_admin_images", force: true do |t|
