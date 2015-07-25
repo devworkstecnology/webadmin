@@ -18,3 +18,4 @@
 //= require_tree .
 
 $(":file").filestyle({icon: false, buttonText: "Selecione o(s) arquivo(s)"});
+$('.datetime').datetimepicker();
