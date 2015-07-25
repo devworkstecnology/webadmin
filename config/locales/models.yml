@@ -37,6 +37,7 @@ pt-BR:
       web_admin/event:
         title: "Título"
         start_date: "Início às"
+        image: "Imagem"
         end_date: "Término às"
         description: "Descrição"
         zipcode: "CEP"

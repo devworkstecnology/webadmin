@@ -2,9 +2,15 @@
   <div class="col-md-12">
     <div class="panel">
       <div class="panel-body">
-        <%= simple_form_for @object, html: { class: "form-horizontal", role: "form"} do |f| %>
+        <%= simple_form_for @object, html: { class: "form-horizontal", role: "form", multipart: true} do |f| %>
+
+          <div class="col-md-12 right">
+            <%= image_tag f.object.image.url(:thumb), class: "right" if f.object.image.present? %>
+          </div>
 
           <%= f.input :title, input_html: { class: 'col-md-8' } %>
+
+          <%= f.input :image, input_html: { class: "col-md-6" } %>
 
           <%= f.input :start_date, as: :string, :input_html => { class: "datetime" } %>
 

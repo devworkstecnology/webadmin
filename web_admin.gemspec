@@ -18,7 +18,7 @@ Gem::Specification.new do |s|
   s.test_files    = `git ls-files -- {spec}/*`.split("\n")
 
 
-  s.add_dependency "rails", "~> 4.1.6"
+  s.add_dependency "rails", ">= 4.1.6"
   s.add_dependency "simple_form"
   s.add_dependency "devise"
   s.add_dependency "ckeditor"

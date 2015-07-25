@@ -13,6 +13,7 @@ feature WebAdmin::Event do
     click_link 'Novo'
 
     fill_in 'Título', with: "Evento 1"
+    attach_file('Selecione o(s) arquivo(s)', "spec/fixtures/p3-single.jpg")
     fill_in 'Início às', with: '30/01/2015 21:00'
     fill_in 'Término às', with: '31/01/2015 00:00'
     fill_in 'Descrição', with: 'Descrição do evento 1'
