@@ -1,0 +1,17 @@
+languages:
+  Ruby: true
+  JavaScript: true
+  Python: true
+  PHP: true
+exclude_paths:
+- 'app/assets/javascripts/web_admin/ie/excanvas.js'
+- 'app/assets/javascripts/web_admin/jquery.datetimepicker.js'
+- 'app/assets/javascripts/web_admin/slider/bootstrap-slider.js'
+- 'app/assets/javascripts/web_admin/grid/gallery.js'
+- 'app/assets/javascripts/web_admin/fuelux/fuelux.js'
+- 'app/assets/javascripts/web_admin/datepicker/bootstrap-datepicker.js'
+- 'app/assets/javascripts/web_admin/datepicker.js'
+- 'app/assets/javascripts/web_admin/combodate/combodate.js'
+- 'app/assets/javascripts/web_admin/bootstrap.js'
+- 'app/assets/javascripts/web_admin/app.js'
+- 'app/assets/javascripts/web_admin/app.data.js'
