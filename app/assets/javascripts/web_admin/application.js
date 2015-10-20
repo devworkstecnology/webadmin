@@ -14,7 +14,7 @@
 //= require jquery_ujs
 //= require jquery-fileupload/basic
 //= require jquery-fileupload/vendor/tmpl
-//= require ckeditor/init
+//= require_tree ../../../../vendor/assets/javascripts/.
 //= require_tree .
 
 $(":file").filestyle({icon: false, buttonText: "Selecione o(s) arquivo(s)"});
