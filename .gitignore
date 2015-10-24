@@ -10,3 +10,5 @@ spec/test_app/.sass-cache
 spec/test_app/config/initializers/carrierwave.rb
 config/database.yml
 *.gem
+.ruby-version
+.ruby-gemset

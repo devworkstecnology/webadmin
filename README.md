@@ -19,8 +19,23 @@ After you install WebAdmin and add it to your Gemfile, add routes to WebAdmin in
 mount WebAdmin::Engine, at: 'admin'
 ```
 
+Load the WebAdmin seeds from your seeds.rb:
+
+```ruby
+WebAdmin::Engine.load_seed
+```
+
 Then need to copy the migration with:
 
 ```console
 rake web_admin:install:migrations
 ```
+
+Run database seeder:
+
+```console
+rake db:seed
+```
+
+The default user is: admin@email.com:pwd12345
+
