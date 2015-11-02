@@ -1,0 +1,16 @@
+uploaders:
+  post:
+    thumb_admin:
+      width: 50
+    thumb_site:
+      width: 50
+  event:
+    thumb_admin:
+      width: 50
+    thumb_site:
+      width: 50
+  image:
+    thumb_admin:
+      width: 50
+    thumb_site:
+      width: 50

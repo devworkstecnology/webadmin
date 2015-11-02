@@ -13,7 +13,7 @@ module WebAdmin
     # Override the directory where uploaded files will be stored.
     # This is a sensible default for uploaders that are meant to be mounted:
     def store_dir
-      "uploads/#{model.class.to_s.underscore}/#{mounted_as}/#{model.id}"
+      "uploads/post/#{mounted_as}/#{model.id}"
     end
 
     # Provide a default URL as a default if there hasn't been a file uploaded:
@@ -35,8 +35,10 @@ module WebAdmin
     # version :thumb do
     #   process :resize_to_fit => [50, 50]
     # end
-    version :thumb do
-      process :resize_to_fit => [80, nil]
+    YAML.load_file("#{Rails.root}/config/images.yml")["uploaders"]["post"].each do |version_name|
+      version version_name.first.to_sym do
+        process :resize_to_fit => [version_name.last["width"], nil]
+      end
     end
 
     # Add a white list of extensions which are allowed to be uploaded.
