@@ -5,7 +5,7 @@
         <%= simple_form_for @object, html: { class: "form-horizontal", role: "form", multipart: true} do |f| %>
 
           <div class="col-md-12 right">
-            <%= image_tag f.object.image.url(:thumb), class: "right" if f.object.image.present? %>
+            <%= image_tag f.object.image.url(:thumb_admin), class: "right" if f.object.image.present? %>
           </div>
 
           <%= f.input :title, input_html: { class: 'col-md-8' } %>
