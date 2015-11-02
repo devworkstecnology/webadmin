@@ -31,7 +31,7 @@ module WebAdmin
     #   # do something
     # end
 
-    YAML.load_file("#{Rails.root}/config/images.yml")["uploaders"]["images"].each do |version_name|
+    YAML.load_file("#{Rails.root}/config/images.yml")["uploaders"]["image"].each do |version_name|
       version version_name.first.to_sym do
         process :resize_to_fit => [version_name.last["width"], nil]
       end
