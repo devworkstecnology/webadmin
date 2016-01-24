@@ -8,7 +8,6 @@ spec/test_app/tmp/
 spec/test_app/public/uploads
 spec/test_app/.sass-cache
 spec/test_app/config/initializers/carrierwave.rb
-spec/test_app/db/schema.rb
 config/database.yml
 *.gem
 .ruby-version
